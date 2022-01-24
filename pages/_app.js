@@ -1,6 +1,5 @@
 import '../styles/globals.css'
 import Header from '../components/layout/header'
-import Footer from '../components/layout/footer'
 import Navbar from '../components/layout/navbar'
 
 
@@ -21,10 +20,12 @@ function MyApp({ Component, pageProps }) {
     }
   ];
   return (
-    <div>
+    <div >
       <Header />
-      <Navbar navItems =  {navItem} />
-      <Component {...pageProps} />
+      <div className='container' >
+        <Navbar navItems =  {navItem} />
+        <Component {...pageProps} />
+      </div>
     </div>
   )
 }
