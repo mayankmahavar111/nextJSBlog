@@ -1,6 +1,5 @@
 .navBarOuterDiv{
     display: grid;
-    grid-template-columns: 60% 40%; 
     padding: 2%;
     background-color: transparent;
 }
