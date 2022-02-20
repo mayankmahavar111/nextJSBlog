@@ -20,12 +20,10 @@ function MyApp({ Component, pageProps }) {
     }
   ];
   return (
-    <div >
+    <div>
       <Header />
-      <div className='container' >
-        <Navbar navItems =  {navItem} />
-        <Component {...pageProps} />
-      </div>
+      <Navbar navItems =  {navItem} />
+      <Component {...pageProps} />
     </div>
   )
 }
