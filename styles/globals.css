@@ -1,4 +1,11 @@
-body{
-    background-color: white;
+body{ 
     color: black;
+    background: lightgreen;
+}
+main{
+    margin: 3%;
+    padding :3%;
+    height: 26rem;
+    border: 2px black double;
+    background: linear-gradient(#64e687, #91e5d9); 
 }

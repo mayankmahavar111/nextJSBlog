@@ -23,8 +23,8 @@ export default function Navbar(props) {
             <div className={Styles.navBarInnerDiv}>
                 {navProps && navProps.length > 0 && navProps.map((item,keys)=>{
                     return<Link href={item.url} key={keys}> 
-                            <a className={Styles.link}> 
-                                <div  className={Styles.linkDiv}>
+                            <a className={Styles.link} style={{borderLeft: keys == 0 ? '1px black double': ''}}>  
+                                <div  className={Styles.linkDiv} >
                                     {item.name}
                                 </div>
                             </a>
