@@ -2,7 +2,7 @@
     display: grid;
     padding: 2%;
     background-color: transparent;
-    border-bottom: 2px black double;
+    border-bottom: 2px #fff double;
 }
 .navBarInnerDiv{
     display: grid;
@@ -13,7 +13,7 @@
     text-decoration: none;
     cursor: pointer;
     color: inherit;
-    border-right: 1px black double;
+    border-right: 1px #fff double;
 }
 .linkDiv:hover{
     transform: scale(1.2);

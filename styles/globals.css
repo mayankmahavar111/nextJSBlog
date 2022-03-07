@@ -1,10 +1,29 @@
 body{ 
-    color: black;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+    color:#ffffff;
+	font-family: system-ui;
 }
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 main{
     margin: 3%;
     padding :3%;
-    height: 26rem;
-    border: 2px black double;
-    background: linear-gradient(#64e687, #91e5d9); 
+    height: inherit;
+}
+main h1{
+    border-bottom: 1px #ffffff double;
+	width: fit-content;
 }

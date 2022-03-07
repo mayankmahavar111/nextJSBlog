@@ -1,0 +1,22 @@
+.projectListContainer{
+    display: flex;
+    text-align: center;
+    padding: 0%;
+    text-align: center;
+}
+
+.projectCardDiv{
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 2%;
+}
+.cardTitle{
+    padding-top: 2%;
+}
+.cardDescription{
+    background-color: rgb(241 239 224);
+    border-radius: 10%;
+}

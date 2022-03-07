@@ -1,15 +1,29 @@
 
-export default function Projects() {
+import styles from '../styles/projects.module.css';
+import { useState } from 'react';
+import ProjectCard from '../components/layout/projectCard';
+
+function Projects(props) {
+  
+  const [projectList, setprojectList] = useState(props.projectList ? props.projectList.slice(0,5) : {});
     return (
-        <div>
           <main>
             <h1>
               Projects
             </h1>
-            <div>
-              Hi, i am creating this website for testing and fun. Don`t mind my naiveness while designing the web page
-            </div>
+            <ProjectCard 
+              projectList= {projectList}
+            />
           </main>
-        </div>
       )
 }
+
+Projects.getInitialProps = async (context) =>{
+  const res  = await fetch("https://api.github.com/users/mayankmahavar111/repos")
+  const jsonRes = await res.json();
+  return {
+    projectList : jsonRes
+  };
+}
+
+export default Projects;
