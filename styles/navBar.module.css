@@ -2,7 +2,6 @@
     display: grid;
     padding: 2%;
     background-color: transparent;
-    border-bottom: 2px #fff double;
 }
 .navBarInnerDiv{
     display: grid;
@@ -15,8 +14,8 @@
     color: inherit;
 }
 .linkDiv:hover{
-    transform: scale(1.2);
-    background-color: inherit;
+    /* transform: scale(1.2);
+    background-color: inherit; */
 }
 .linkDiv{
     text-align: center;
