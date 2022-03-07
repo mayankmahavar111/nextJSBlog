@@ -3,8 +3,8 @@ body{
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
-    color:#ffffff;
-	font-family: system-ui;
+    color:#ffffff !important;
+	font-family: system-ui !important;
 }
 @keyframes gradient {
 	0% {
@@ -24,6 +24,6 @@ main{
     height: inherit;
 }
 main h1{
-    border-bottom: 1px #ffffff double;
+    border-bottom: 2px #9b9b9b solid;
 	width: fit-content;
 }

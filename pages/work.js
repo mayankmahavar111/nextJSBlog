@@ -9,7 +9,7 @@ function Projects(props) {
     return (
           <main>
             <h1>
-              Projects
+              Work
             </h1>
             <ProjectCard 
               projectList= {projectList}

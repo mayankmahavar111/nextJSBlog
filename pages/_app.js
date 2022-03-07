@@ -12,8 +12,8 @@ function MyApp({ Component, pageProps }) {
       name : 'Home'
     },
     {
-      url:'/projects',
-      name : 'Projects'
+      url:'/work',
+      name : 'Work'
     },
     {
       url:'/contact',
@@ -21,20 +21,31 @@ function MyApp({ Component, pageProps }) {
     }
   ];
 
+  const mobileViewWidth = 800;
   const [mainHeight ,setMainHeight] = useState('26');
+  const [isMobileView , setMobileView] =useState(false);
 
   useEffect(()=>{
     if (typeof window && window.innerHeight*0.5/16 != mainHeight){
       setMainHeight(window.innerHeight*0.5/16)
+    }
+    if (typeof window && isMobileView == false && window.innerWidth < mobileViewWidth)
+    {
+      setMobileView(true);
     }
   },[])
 
   return (
     <div>
       <Header />
-      <Navbar navItems =  {navItem} />
+      <Navbar 
+        navItems =  {navItem} 
+        mobileView = {isMobileView}
+        />
       <div style={{height:`${mainHeight}rem`}}>
-        <Component {...pageProps} />
+        <Component {...{...pageProps , ...{
+          mobileView : isMobileView
+        }}} />
       </div>
     </div>
   )

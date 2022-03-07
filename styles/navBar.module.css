@@ -13,7 +13,6 @@
     text-decoration: none;
     cursor: pointer;
     color: inherit;
-    border-right: 1px #fff double;
 }
 .linkDiv:hover{
     transform: scale(1.2);
