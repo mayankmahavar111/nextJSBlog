@@ -5,6 +5,7 @@ body{
 	height: 100vh;
     color:#ffffff !important;
 	font-family: system-ui !important;
+	overflow-y: hidden;
 }
 @keyframes gradient {
 	0% {
