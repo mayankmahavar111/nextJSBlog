@@ -2,6 +2,8 @@
 import Link from "next/link"
 import { iconSvg } from "../components/api/helper"
 import Styles from '../styles/contact.module.css'
+import { motion } from "framer-motion"
+import { listContainerVariant , listItemVariant} from "../components/motion/listMotion"
 
 export default function Contact(props) {
 
@@ -44,15 +46,30 @@ export default function Contact(props) {
             <div>
               Contact Form coming soon ... 
             </div>
-            <div className={`displayFlex ${Styles.linkOuterDiv}`}> 
+            {/* <div className={`displayFlex ${Styles.linkOuterDiv}`}>  */}
+            <motion.div
+              initial = "hidden"
+              animate = "show"
+              variants={listContainerVariant}
+              className={`displayFlex ${Styles.linkOuterDiv}`}
+            >
               {contactList.map((item,key) => {
-                return <div className={`mAuto ${Styles.linkDiv}`} key={key}>
+
+                  return <motion.div
+                      variants={listItemVariant}
+                      className={`mAuto ${Styles.linkDiv}`}
+                      key = {key}
+                    > 
                       <Link href={item.link}>
                         <a>{iconSvg(item.name.toLocaleLowerCase())} {props.mobileView == false? item.name : ''}</a>
                       </Link>
-                  </div>
-              })}
-            </div>
+
+                    </motion.div>
+                })}
+
+            </motion.div>
+
+            {/* </div> */}
           </main>
       )
 }
