@@ -5,7 +5,6 @@ import { iconSvg } from '../api/helper';
 
 export default function Navbar(props) {
     const navProps =  props.navItems ? props.navItems : [];
-    // const [gridPercent, setGridPercent] =  useState('60% 40%');
     const gridPercent = props.mobileView ? '50% 50%' : '60% 40%';
 
 
