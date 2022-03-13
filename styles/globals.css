@@ -2,10 +2,8 @@ body{
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	height: 100vh;
     color:#ffffff !important;
 	font-family: system-ui !important;
-	overflow-y: hidden;
 }
 @keyframes gradient {
 	0% {
@@ -23,9 +21,9 @@ main{
     margin: 3%;
     padding :3%;
     height: inherit;
+	cursor: default;
 }
 main h1{
-    border-bottom: 2px #fff solid;
 	width: fit-content;
 }
 main .displayFlex {
@@ -36,7 +34,7 @@ main .mAuto {
 }
 body a {
 	text-decoration: none;
-	color: inherit;
+	color: #fff !important;
 	position: relative;
 }
 
@@ -58,3 +56,6 @@ body a:hover::before{
 	transform:scaleX(100%);
 	transform-origin: 0 0;
   }
+.floatR{
+	float: right;
+}

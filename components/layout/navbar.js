@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { useEffect , useState } from 'react';
 import Styles from '../../styles/navBar.module.css';
 import { iconSvg } from '../api/helper';
 

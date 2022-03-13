@@ -1,5 +1,3 @@
-
-import Link from "next/link"
 import { iconSvg } from "../components/api/helper"
 import Styles from '../styles/contact.module.css'
 import { motion } from "framer-motion"
@@ -60,9 +58,7 @@ export default function Contact(props) {
                       className={`mAuto ${Styles.linkDiv}`}
                       key = {key}
                     > 
-                      <Link href={item.link}>
-                        <a>{iconSvg(item.name.toLocaleLowerCase())} {props.mobileView == false? item.name : ''}</a>
-                      </Link>
+                        <a target={'_blank'} href={item.link}>{iconSvg(item.name.toLocaleLowerCase())} {props.mobileView == false? item.name : ''}</a>
 
                     </motion.div>
                 })}

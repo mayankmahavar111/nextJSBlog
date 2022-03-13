@@ -14,7 +14,7 @@ const securityHeader  =[
   },
   {
     key: 'X-Frame-Options',
-    value: 'SAMEORIGIN'
+    value: 'sameorigin'
   },
   {
     key: 'X-Content-Type-Options',
@@ -30,5 +30,11 @@ const securityHeader  =[
 module.exports = {
   reactStrictMode: true,
   source: '*/path',
-  headers : securityHeader
+  headers : securityHeader,
+  images : {
+    domains :[
+      'www.tatahealth.com',
+      'www.determinantstudios.com'
+    ]
+  }
 }
