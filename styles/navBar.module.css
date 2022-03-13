@@ -13,10 +13,6 @@
     cursor: pointer;
     color: inherit;
 }
-.linkDiv:hover{
-    /* transform: scale(1.2);
-    background-color: inherit; */
-}
 .linkDiv{
     text-align: center;
 }

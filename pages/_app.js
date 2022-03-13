@@ -24,6 +24,7 @@ function MyApp({ Component, pageProps }) {
   const mobileViewWidth = 800;
   const [mainHeight ,setMainHeight] = useState('26');
   const [isMobileView , setMobileView] =useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(()=>{
     if (typeof window && window.innerHeight*0.5/16 != mainHeight){
@@ -33,21 +34,27 @@ function MyApp({ Component, pageProps }) {
     {
       setMobileView(true);
     }
+    if (loading == true)
+      setLoading(false);
   },[])
-
   return (
-    <div>
-      <Header />
-      <Navbar 
-        navItems =  {navItem} 
-        mobileView = {isMobileView}
-        />
-      <div style={{height:`${mainHeight}rem`}}>
-        <Component {...{...pageProps , ...{
-          mobileView : isMobileView
-        }}} />
+    <>
+      {loading ? <div> </div> : 
+        <div>
+        <Header />
+        <Navbar 
+          navItems =  {navItem} 
+          mobileView = {isMobileView}
+          />
+        <div style={{height:`${mainHeight}rem`}}>
+          <Component {...{...pageProps , ...{
+            mobileView : isMobileView
+          }}} />
+        </div>
       </div>
-    </div>
+      }
+    </>
+    
   )
 }
 

@@ -1,4 +1,77 @@
-
+export const workList = {
+    proffesional : [
+      {
+        "name" : "Tata Health",
+        "description" : "Tata Health has a online platform for providing medical facilities. It has multiple modules such as pharma, lab, consultation, etc.",
+        "link" : "https://www.tatahealth.com/",
+        "contribution": "Design and developed multiple modules such as packages, chat system, admin dashboard. Worked on increasing perfermonce and seo on landing page. Desing and developed internal framework such as security related, firebase for web, mixpanel , moengage.",
+        "startYear" : '2019',
+        "endYear" : null,
+        "techStack" : [
+          "react",
+          "node",
+          "laravel"
+        ]
+      },
+      {
+        "name" : "Determinant Studios",        
+        "description" : "Determinant Studios is a product based company. It is specialise in building and maintaing custom software.",
+        "link" : "https://www.determinantstudios.com/",
+        "contribution" : "Designed and developed system such as self driving vehicle using deep reinforcement learning. Build working model with unity and python.",
+        "startYear" : "2018",
+        "endYear" : "2018 (2 months)",
+        "techStack" : [
+          "unity",
+          "python",
+          "c#"
+        ]
+      }
+    ],
+    personal : [
+      {
+        "name" : "Portfolio",        
+        "description" : "A simple website built for trying things for fun.",
+        "link" : "https://github.com/mayankmahavar111/nextJSBlog",
+        "contribution" : "It is made using next js. Deployed on vercel. Added frame motion as well.",
+        "startYear" : "2022",
+      },
+      {
+        "name" : "Desktop Assistatnt",        
+        "description" : "An application which helps in regular task of desktop",
+        "link" : "https://github.com/mayankmahavar111/pc-assistant",
+        "contribution" : "It is an applicataion which takes voice input and run commands accordingly such as open mail, fifa , music player, etc. surfing web and sending mail remotely was also added.",
+        "startYear" : "2017",
+      },
+      {
+        "name" : "Utilities",        
+        "description" : "Single task usage scripts.",
+        "link" : "https://github.com/mayankmahavar111/fun",
+        "contribution" : "This project containts python scripts to do task such as surf web and save it in json, scrap webiste, automation",
+        "startYear" : "207",
+      },
+      {
+        "name" : "Phising detection Framework",        
+        "description" : "Model to detect phishing website",
+        "link" : "https://github.com/mayankmahavar111/ias",
+        "contribution" : "This project has a way to detect given website as phishy or not. Multiple algorithm such as svm, naivebayes. etc were used to get better result.",
+        "startYear" : "2017",
+      },
+      {
+        "name" : "Music Player",        
+        "description" : "Python Based Music Player with basic ui.",
+        "link" : "https://github.com/mayankmahavar111/dbms",
+        "contribution" : "Music player built using Tkinter. You can add/remove songs into the music player. Music details fetched and stored automatically.",
+        "startYear" : "2016",
+      },
+      {
+        "name" : "Leap Motion ",        
+        "description" : "A simple application used to demonstrate leap motion gesture with leap motion.",
+        "link" : "https://github.com/mayankmahavar111/hci",
+        "contribution" : "Leap motion is used to contorll vlc web view. close/roll/movement detection of hand were used to do multiple action of vlc media player.",
+        "startYear" : "2018",
+      }
+    ]
+  }
 
 
 export const iconSvg = (component) =>{
@@ -50,6 +123,16 @@ export const iconSvg = (component) =>{
                         <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
                         <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z"/>
                     </svg>
+        case "code" :
+            return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-file-earmark-code" viewBox="0 0 16 16">
+                        <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                        <path d="M8.646 6.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 9 8.646 7.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 9l1.647-1.646a.5.5 0 0 0 0-.708z"/>
+                    </svg>
+        case "calender" :
+            return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-calendar3" viewBox="0 0 16 16">
+                    <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+                    <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                </svg>
         default :
             return
     }
