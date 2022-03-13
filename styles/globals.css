@@ -59,3 +59,11 @@ body a:hover::before{
 .floatR{
 	float: right;
 }
+.autoMarginPadding{
+	padding: 2%;
+	margin: 2%;
+}
+
+.padBtm5{
+	padding-bottom: 5%;
+}

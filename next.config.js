@@ -30,11 +30,5 @@ const securityHeader  =[
 module.exports = {
   reactStrictMode: true,
   source: '*/path',
-  headers : securityHeader,
-  images : {
-    domains :[
-      'www.tatahealth.com',
-      'www.determinantstudios.com'
-    ]
-  }
+  headers : securityHeader
 }
