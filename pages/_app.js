@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import Header from '../components/layout/header'
 import Navbar from '../components/layout/navbar'
 import { useEffect, useState } from 'react';
+import Loading from '../components/layout/loading';
 
 
 function MyApp({ Component, pageProps }) {
@@ -27,19 +28,19 @@ function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(()=>{
-    if (typeof window && window.innerHeight*0.5/16 != mainHeight){
-      setMainHeight(window.innerHeight*0.5/16)
+    if (typeof window){
+      if (window.innerHeight*0.5/16 != mainHeight)
+        setMainHeight(window.innerHeight*0.5/16);
+      if (isMobileView == false && window.innerWidth < mobileViewWidth){
+        setMobileView(true);
+      }
+      if (loading == true)
+        setLoading(false);
     }
-    if (typeof window && isMobileView == false && window.innerWidth < mobileViewWidth)
-    {
-      setMobileView(true);
-    }
-    if (loading == true)
-      setLoading(false);
   },[])
   return (
     <>
-      {loading ? <div> </div> : 
+      {loading ? <Loading /> : 
         <div>
         <Header />
         <Navbar 
