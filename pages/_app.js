@@ -1,28 +1,14 @@
 import '../styles/globals.css'
-import Header from '../components/layout/header'
-import Navbar from '../components/layout/navbar'
 import { useEffect, useState } from 'react';
 import Loading from '../components/layout/loading';
+import { gloablUrl ,mobileViewWidth} from '../components/api/helper';
+import { Suspense } from 'react/cjs/react.production.min';
 
+import dynamic from 'next/dynamic';
+const Header = dynamic(()=> import('../components/layout/header'))
+const Navbar = dynamic(()=>import('../components/layout/navbar'))
 
 function MyApp({ Component, pageProps }) {
-
-  const navItem =[
-    {
-      url:'/',
-      name : 'Home'
-    },
-    {
-      url:'/work',
-      name : 'Work'
-    },
-    {
-      url:'/contact',
-      name : 'Contact'
-    }
-  ];
-
-  const mobileViewWidth = 800;
   const [mainHeight ,setMainHeight] = useState('26');
   const [isMobileView , setMobileView] =useState(false);
   const [loading, setLoading] = useState(true);
@@ -44,14 +30,16 @@ function MyApp({ Component, pageProps }) {
         <div>
         <Header />
         <Navbar 
-          navItems =  {navItem} 
+          navItems =  {gloablUrl} 
           mobileView = {isMobileView}
           />
-        <div style={{height:`${mainHeight}rem`}}>
-          <Component {...{...pageProps , ...{
-            mobileView : isMobileView
-          }}} />
-        </div>
+        <Suspense fallback={<Loading />}>
+          <div style={{height:`${mainHeight}rem`}}>
+            <Component {...{...pageProps , ...{
+              mobileView : isMobileView
+            }}} />
+          </div>
+        </Suspense>
       </div>
       }
     </>

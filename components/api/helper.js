@@ -1,3 +1,56 @@
+
+
+export const mobileViewWidth = 800;
+export const gloablUrl =[
+    {
+      url:'/',
+      name : 'Home'
+    },
+    {
+      url:'/work',
+      name : 'Work'
+    },
+    {
+      url:'/contact',
+      name : 'Contact'
+    }
+  ];
+
+export const contactList = {
+    profile : [
+        {
+            'name' : 'Linkedin',
+            'link' : 'https://www.linkedin.com/in/mayank-mahavar/'
+        },
+        {
+            'name' : 'Github',
+            'link' : 'https://github.com/mayankmahavar111'
+        },
+        {
+            'name' : 'Gmail',
+            'link' : 'mailto:mayankmahavar111@gmail.com'
+        },  
+        {
+            'name' : 'Meta',
+            'link' : 'https://www.facebook.com/people/Mayank-Mahavar/100004140257021/'
+        },
+        {
+            'name' : 'Instagram',
+            'link' : 'https://www.instagram.com/mayankmahavar/'
+        },
+            
+    ],
+    connect : [
+        {
+            'name' : 'Telegram',
+            'link' : 'https://t.me/mayankmahavar'
+        },
+        {
+            'name' : 'Whatsapp',
+            'link' : 'https://wa.me/+919643523146'
+        },
+    ]
+}
 export const workList = {
     proffesional : [
       {

@@ -1,3 +1,6 @@
 .linkOuterDiv{
     padding-top: 3%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 20%;
 }

@@ -27,8 +27,6 @@
 .headerMobile{
     display: grid;
     grid-template-columns: 50% 50%;
-    border: 2px #fff solid;
-    border-radius: 1rem;
     padding: 2%;
     margin: 2%;
     text-align: center;
@@ -38,5 +36,4 @@
     padding-bottom: 4%;
     padding-top: 0%;
     border: 1px #fff solid;
-    background-color: lightslategrey;
 }

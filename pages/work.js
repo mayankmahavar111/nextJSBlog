@@ -62,7 +62,7 @@ function Work(props) {
             </div>}
             {( !props.mobileView || props.mobileView && workSelection != 'company') &&  workList.personal.length > 0 && 
             <div style={{paddingLeft:"2%", paddingTop:"6%" ,paddingBottom:"5%"}}>
-              <div className='padBtm5'>
+              <div className='padBtm2'>
                 <h2 >Projects</h2> 
                 <div className='floatR'> <a target={"_blank"}>View All {iconSvg('folder')}</a> </div>
               </div>
