@@ -1,6 +1,6 @@
 import { iconSvg } from "../components/api/helper"
 import Styles from '../styles/contact.module.css'
-import { motion } from "framer-motion"
+import {LazyMotion,domAnimation, motion } from "framer-motion"
 import { listContainerVariant , listItemVariant} from "../components/motion/listMotion"
 import { contactList } from "../components/api/helper"
 
@@ -18,25 +18,28 @@ export default function Contact(props) {
               <div>
                 <h3>Profile links </h3>
                 <br></br>
-                <motion.div
-                  initial = "hidden"
-                  animate = "show"
-                  variants={listContainerVariant}
-                  className={`${Styles.linkOuterDiv}`}
-                >
-                  {contactList.profile.map((item,key) => {
+                <LazyMotion features={domAnimation}>
+                  <motion.div
+                      initial = "hidden"
+                      animate = "show"
+                      variants={listContainerVariant}
+                      className={`${Styles.linkOuterDiv}`}
+                    >
+                      {contactList.profile.map((item,key) => {
 
-                      return <motion.div
-                          variants={listItemVariant}
-                          className={`mAuto`}
-                          key = {key}
-                        > 
-                            <a target={'_blank'} href={item.link}>{iconSvg(item.name.toLocaleLowerCase())} {props.mobileView == false? item.name : ''}</a>
+                          return <motion.div
+                              variants={listItemVariant}
+                              className={`mAuto`}
+                              key = {key}
+                            > 
+                                <a target={'_blank'} href={item.link}>{iconSvg(item.name.toLocaleLowerCase())} {props.mobileView == false? item.name : ''}</a>
 
-                        </motion.div>
-                    })}
+                            </motion.div>
+                        })}
 
-                </motion.div>
+                  </motion.div>
+                </LazyMotion>
+                  
               </div>
             }
             {contactList.connect && contactList.connect.length >0 && 
