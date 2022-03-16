@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 const PopUp = dynamic(() => import('../components/layout/popUp'));
 import { firebaseLogin } from '../components/firebase/commonFunction';
+import Link from 'next/link';
 
 export default  function Login(props){
 
@@ -53,6 +54,11 @@ export default  function Login(props){
                     > 
                         <span>Login</span>  {iconSvg('loginButton')}
                     </motion.button>
+                </div>
+                <div>
+                    <Link href={'/register'}>
+                        <a> {iconSvg('register')}  Not Registered Yet ?? </a>
+                    </Link>
                 </div>
             </div>
         </main>
