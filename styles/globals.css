@@ -75,7 +75,8 @@ input{
 	width: 18rem;
     height: 2.8rem;
     background-color: transparent;
-    border: 2px #fff solid;
+    border: 2px transparent solid;
+	border-bottom: 2px #fff solid;;
     border-radius: 1rem;
     color: #fff;
 	margin: 2%;

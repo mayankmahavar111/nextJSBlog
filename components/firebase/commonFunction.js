@@ -8,10 +8,8 @@ export async function firebaseLogin(email,password){
     const auth =  getAuth(app);
     await signInWithEmailAndPassword(auth, email,password).then((respData)=>{
         const succes = JSON.stringify(respData);
-        console.log("inside firebase login",succes);
     }).catch((err)=>{
         const error =  JSON.stringify( err);
-        console.log("inside firebase login error", error);
     })
     return
 }
