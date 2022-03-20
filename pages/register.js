@@ -5,6 +5,7 @@ import { iconSvg } from '../components/api/helper';
 import { useState } from 'react';
 const PopUp =  dynamic(()=> import('../components//layout/popUp'));
 import callApi from '../components/api/callApi';
+import { useRouter } from 'next/router';
 
 export default function Register(props){
 
@@ -15,10 +16,19 @@ export default function Register(props){
     const [rePassword, setRePassword] = useState('');
     const [popupData , setPopupData] = useState({});
 
+    const navigate = useRouter();
+
     async function validatForm(){
-        if (email == '' || name =='' || password == '' || rePassword == ''){
+        if (email == ''|| password == '' || rePassword == ''){
             setPopupData({
-                message : 'inside register erro',
+                message : 'Please enter all the required Field',
+                statusCode : -400
+            })
+            return
+        }
+        if (password != rePassword){
+            setPopupData({
+                message: 'Password Dosen`t match',
                 statusCode : -400
             })
             return
@@ -27,19 +37,28 @@ export default function Register(props){
             '/api/authentication/createUser',
             {
                 email :email,
-                name:name,
+                // name:name,
                 password : password,
                 rePassword : rePassword
             },
             'post'
-        )
+        );
+        setPopupData(data);
+    }
+
+    function popUpCloseHandle (){
+        if(popupData.statusCode>0 ){
+            navigate.push('/')
+        }else{
+            setPopupData({})
+        }
     }
 
     return(
     <main>
         <PopUp 
             data = {popupData}
-            handleClose= {()=>setPopupData({})}
+            handleClose= {()=>popUpCloseHandle()}
             showModal = {Object.keys(popupData).length>0}
         />
         <div className={Styles.registerOuterDiv}>
@@ -48,7 +67,7 @@ export default function Register(props){
                 <input  onInput={(e)=>{setEmail(e.target.value)}} placeholder='Enter Email' ></input>
             </div>
             <div>
-                <input  onInput={(e)=>{setName(e.target.value)}}  placeholder='Name' ></input>
+                {/* <input  onInput={(e)=>{setName(e.target.value)}}  placeholder='Name' ></input> */}
             </div>
             <div>
                 <input  onInput={(e)=>{setPassword(e.target.value)}}  type={'password'} placeholder='Enter Password' ></input>

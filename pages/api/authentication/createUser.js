@@ -18,20 +18,28 @@ async function firebaseLogin(email,password){
 
 async function createFirebaseUser(email,password){
     const resp = await createUserWithEmailAndPassword(auth,email, password).then((respData)=>{
-        return JSON.parse(respData)
+        return respData
     }).catch((err)=>{
-        return err.code;
+        return err;
     })
-    return resp;
+    if (resp.hasOwnProperty('user')){
+        return {
+            message : "User Created sucessfully",
+            code : 200
+        }
+    }else{
+        return{
+            message : resp.message,
+            code : -200
+        }
+    }
 }
 
 export default async function handler(req,res){
-    if (req.method == 'POST'){
-        const data= await createFirebaseUser(req.body.email, req.body.password)
-        res.status(200).json({msg:'got it' , firbase:data })
-    }else{
-        
-    res.status(200).json({msg:'got it' ,  })
-    }
+    const data= await createFirebaseUser(req.body.email, req.body.password)
+    res.status(200).json({
+        message : data.message,
+        statusCode : data.code
+    })
 
 }
