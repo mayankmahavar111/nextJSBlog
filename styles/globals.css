@@ -34,7 +34,7 @@ main .mAuto {
 }
 body a {
 	text-decoration: none;
-	color: #fff !important;
+	color: #fff;
 	position: relative;
 }
 

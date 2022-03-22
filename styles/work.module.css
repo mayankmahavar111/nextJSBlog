@@ -7,11 +7,20 @@
     background: transparent;
     padding: 4%;
     margin: 3%;
-    border-radius: 1rem;
     border: 2px #fff solid;
     height: 100%;
     text-align: justify;
     position: relative;
+    border-bottom-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+}
+.card:hover {
+    background-color: #fff;
+    color: #000;
+}
+.card:hover .cardLink>div>a{
+    color: #000;
+    text-decoration-color: #000;
 }
 .card h3{
     border-bottom: 1px #fff solid ;
