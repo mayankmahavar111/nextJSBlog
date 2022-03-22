@@ -1,10 +1,10 @@
-import { NextRequest, NextFetchEvent, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 // import { sessionOptions } from '../../../components/api/session'
 // import { withIronSessionApiRoute } from 'iron-session/next'
 
 // export default withIronSessionApiRoute(middleware , sessionOptions);
 
-export default async function middleware(req= NextRequest, ev= NextFetchEvent, res =NextResponse) {
+export default async function middleware(req= NextRequest, res =NextResponse) {
     const url =  req.nextUrl.clone()
     url.pathname= '/login';
 
