@@ -48,7 +48,7 @@ export default function Register(props){
 
     function popUpCloseHandle (){
         if(popupData.statusCode>0 ){
-            navigate.push('/')
+            navigate.replace('/')
         }else{
             setPopupData({})
         }

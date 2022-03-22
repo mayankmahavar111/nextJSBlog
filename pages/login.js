@@ -4,8 +4,10 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 const PopUp = dynamic(() => import('../components/layout/popUp'));
-import { firebaseLogin } from '../components/firebase/commonFunction';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+import callApi from '../components/api/callApi';
 
 export default  function Login(props){
 
@@ -13,19 +15,32 @@ export default  function Login(props){
     const [password, setPassword] = useState('');
     const [popupData , setPopupData] = useState({});
 
-    function validateAndLogin(){
+    const navigate = useRouter();
+
+    async function validateAndLogin(){
         if(email == '' || password == ''){
             
             setPopupData({
                 message : "Please enter email and password",
-                statusCode : 400
+                statusCode : -400
             })
             return;
         }
-        firebaseLogin(email,password);
+        const data = await callApi('/api/authentication/login',{email:email,password : password},'post')
+        if (data.statusCode && data.message){
+            setPopupData(data);
+        }else{
+            setPopupData({
+                message:"Something went wrong try again later",
+                statusCode : data.statusCode ? data.statusCode : -200
+            })
+        }
     }
 
     function handleModaleClose(){
+        if (popupData.statusCode > 0 && popupData.isLoggedIn){
+            navigate.replace('/');
+        }
         setPopupData({});
     }
 

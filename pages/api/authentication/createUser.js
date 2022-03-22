@@ -4,17 +4,7 @@ import {getAuth , signInWithEmailAndPassword , createUserWithEmailAndPassword} f
 const app =  initializeApp(firebaseConfig);
 const auth =  getAuth(app);
 
-async function firebaseLogin(email,password){
-    
-    await signInWithEmailAndPassword(auth, email,password).then((respData)=>{
-        const succes = JSON.stringify(respData);
-        return succes;
-    }).catch((err)=>{
-        const error =  JSON.stringify( err);
-        return error;
-    })
-    return
-}
+
 
 async function createFirebaseUser(email,password){
     const resp = await createUserWithEmailAndPassword(auth,email, password).then((respData)=>{
