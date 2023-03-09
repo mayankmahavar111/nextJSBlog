@@ -1,4 +1,6 @@
-
+export const sessionConfig = {
+  
+}
 
 export const mobileViewWidth = 800;
 export const gloablUrl =[
@@ -59,7 +61,7 @@ export const workList = {
         "link" : "https://www.tatahealth.com/",
         "contribution": "Design and developed multiple modules such as packages, chat system, admin dashboard. Worked on increasing perfermonce and seo on landing page. Desing and developed internal framework such as security related, firebase for web, mixpanel , moengage.",
         "startYear" : '2019',
-        "endYear" : null,
+        "endYear" : "2022 (3.5 yrs)",
         "techStack" : [
           "react",
           "node",
