@@ -30,5 +30,15 @@ const securityHeader  =[
 module.exports = {
   reactStrictMode: true,
   source: '*/path',
-  headers : securityHeader
+  headers : securityHeader,
+  webpack(config, options) {
+    config.module.rules.push({
+      test: /\.mp3$/,
+      use: {
+        loader: 'url-loader',
+      },
+    });
+    return config;
+  },
 }
+

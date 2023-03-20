@@ -32,7 +32,7 @@ export default function Contact(props) {
                               className={`mAuto`}
                               key = {key}
                             > 
-                                <a target={'_blank'} href={item.link}>{iconSvg(item.name.toLocaleLowerCase())} {props.mobileView == false? item.name : ''}</a>
+                                <a target={'_blank'} rel="noreferrer" href={item.link}>{iconSvg(item.name.toLocaleLowerCase())} {props.mobileView == false? item.name : ''}</a>
 
                             </motion.div>
                         })}
@@ -59,7 +59,7 @@ export default function Contact(props) {
                           className={`mAuto`}
                           key = {key}
                         > 
-                            <a target={'_blank'} href={item.link}>{iconSvg(item.name.toLocaleLowerCase())} {props.mobileView == false? item.name : ''}</a>
+                            <a target={'_blank'}  rel="noreferrer" href={item.link}>{iconSvg(item.name.toLocaleLowerCase())} {props.mobileView == false? item.name : ''}</a>
 
                         </motion.div>
                     })}

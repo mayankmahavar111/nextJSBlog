@@ -7,6 +7,7 @@ import { Suspense } from 'react/cjs/react.production.min';
 import dynamic from 'next/dynamic';
 const Header = dynamic(()=> import('../components/layout/header'))
 const Navbar = dynamic(()=>import('../components/layout/navbar'))
+const Footer = dynamic(() => import("../components/layout/footer"))
 
 function MyApp({ Component, pageProps }) {
   const [mainHeight ,setMainHeight] = useState('26');
@@ -40,6 +41,7 @@ function MyApp({ Component, pageProps }) {
             }}} />
           </div>
         </Suspense>
+        <Footer />
       </div>
       }
     </>
