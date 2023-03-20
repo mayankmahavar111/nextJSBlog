@@ -1,0 +1,9 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    width: 7%;
+    margin: 2%;
+    text-align: center;
+
+}
