@@ -1,11 +1,14 @@
 import Link from 'next/link'
 import Styles from '../../styles/navBar.module.css';
 import { iconSvg } from '../api/helper';
+import { useRouter } from 'next/router';
 
 export default function Navbar(props) {
     const navProps =  props.navItems ? props.navItems : [];
     const gridPercent = props.mobileView ? '50% 50%' : '60% 40%';
 
+    const router = useRouter()
+    const showBack =  window.location.href.includes("interview/") 
 
     return (
         <div className={Styles.navBarOuterDiv} style={{gridTemplateColumns: gridPercent}}>
@@ -26,6 +29,8 @@ export default function Navbar(props) {
                 })}
 
             </div>
+        
+            {showBack && <button role='link' onClick={()=> { router.back()}} >{"<"}</button> }
        </div>
     )
 }

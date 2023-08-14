@@ -2,6 +2,14 @@ export const sessionConfig = {
   
 }
 
+export const interviewTopicListRoute = [
+  {
+    name : "Object",
+    key : "objects",
+    link:"/interview/objects"
+  }
+]
+
 export const mobileViewWidth = 800;
 export const gloablUrl =[
     {
