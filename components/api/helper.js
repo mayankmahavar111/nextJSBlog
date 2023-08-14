@@ -56,6 +56,18 @@ export const contactList = {
 export const workList = {
     proffesional : [
       {
+        "name" : "Tata 1mg",
+        "description" : "Tata 1mg provides you with medical information which is curated, written and verified by experts, accurate and trustworthy.",
+        "link" : "https://www.1mg.com/",
+        "contribution": "Designed and Implemented interactive and scalable dashboards for onboarding corporate clients such as SBI, IOCL, and HCL in a B2B2E setting in a span of 3 months.",
+        "startYear" : '2022',
+        "endYear" : "Currently",
+        "techStack" : [
+          "react",
+          "node"
+        ]
+      },
+      {
         "name" : "Tata Health",
         "description" : "Tata Health has a online platform for providing medical facilities. It has multiple modules such as pharma, lab, consultation, etc.",
         "link" : "https://www.tatahealth.com/",
