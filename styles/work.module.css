@@ -1,8 +1,7 @@
 .cardOuterDiv{
     display: grid;
     grid-auto-flow: row;
-    grid-row-gap: 10%;
-    height: 44rem;
+    grid-row-gap: 15%;
 }
 .card{
     background: transparent;
