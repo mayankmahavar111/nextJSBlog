@@ -1,111 +1,126 @@
-body{ 
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-    color:#ffffff !important;
-	font-family: system-ui !important;
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #ffffff !important;
+  font-family: system-ui !important;
 }
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-main{
-    margin: 3%;
-    padding :0%;
-    height: inherit;
-	cursor: default;
+main {
+  margin: 3%;
+  padding: 0%;
+  height: inherit;
+  cursor: default;
 }
-main h1{
-	width: fit-content;
+main h1 {
+  width: fit-content;
 }
 main .displayFlex {
-	display: flex;
+  display: flex;
 }
 main .mAuto {
-	margin: auto;
+  margin: auto;
 }
 body a {
-	text-decoration: none;
-	color: #fff;
-	position: relative;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
 }
 
-body a::before{
-	content: '';
-	position: absolute;
-	bottom: -1rem;
-	left: 0;
-	right: 0;
-	display: block;
-	width: 100%;
-	height: 0.125rem;
-	background-color: #fff;
-	transform: scaleX(0%);
-	transition:transform 0.5s cubic-bezier(.23,1,.32,1);
-	transform-origin: 100% 0;
-  }
-body a:hover::before{
-	transform:scaleX(100%);
-	transform-origin: 0 0;
-  }
-.floatR{
-	float: right;
+body a::before {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 0.125rem;
+  background-color: #fff;
+  transform: scaleX(0%);
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-origin: 100% 0;
 }
-.autoMarginPadding{
-	padding: 2%;
-	margin: 2%;
+body a:hover::before {
+  transform: scaleX(100%);
+  transform-origin: 0 0;
 }
-
-.padBtm5{
-	padding-bottom: 5%;
+.floatR {
+  float: right;
 }
-.padBtm2{
-	padding-bottom: 2%;
+.autoMarginPadding {
+  padding: 2%;
+  margin: 2%;
 }
 
-input{
-	width: 18rem;
-    height: 2.8rem;
-    background-color: transparent;
-    border: 2px transparent solid;
-	border-bottom: 2px #fff solid;;
-    border-radius: 1rem;
-    color: #fff;
-	margin: 2%;
-}
-input::placeholder{
-	color: #fff;
-	opacity: 0.8;
-	padding-left: 3%;
-}
-input:focus{
-	outline: none;
-	background-color: #fff;
-	color: #696969;
+.marginAuto {
+  margin: auto;
 }
 
-button{
-	background-color: transparent;
-	color: #fff;
-	border: 2px #fff solid;
-	border-radius: 1rem;
-	width: 12rem;
-	height: 2.8rem;
-	text-align: center;
-	justify-content: center;
-	margin: 3%;
-	cursor: pointer;
+.padLeft1 {
+  padding-left: 1%;
+}
+.padLeft5 {
+  padding-left: 5%;
 }
 
-button:hover{
-	background-color: #fff;
-	color: #696969;
+.padRight5 {
+  padding-right: 5%;
+}
+
+.padBtm5 {
+  padding-bottom: 5%;
+}
+.padBtm2 {
+  padding-bottom: 2%;
+}
+
+input {
+  width: 18rem;
+  height: 2.8rem;
+  background-color: transparent;
+  border: 2px transparent solid;
+  border-bottom: 2px #fff solid;
+  border-radius: 1rem;
+  color: #fff;
+  margin: 2%;
+}
+input::placeholder {
+  color: #fff;
+  opacity: 0.8;
+  padding-left: 3%;
+}
+input:focus {
+  outline: none;
+  background-color: #fff;
+  color: #696969;
+}
+
+button {
+  background-color: transparent;
+  color: #fff;
+  border: 2px #fff solid;
+  border-radius: 1rem;
+  width: 12rem;
+  height: 2.8rem;
+  text-align: center;
+  justify-content: center;
+  margin: 3%;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #696969;
 }
