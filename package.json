@@ -19,6 +19,7 @@
     "use-sound": "^4.0.1"
   },
   "devDependencies": {
+    "@release-it/conventional-changelog": "^7.0.1",
     "@types/node": "^17.0.22",
     "@types/react": "^17.0.41",
     "eslint": "8.7.0",
